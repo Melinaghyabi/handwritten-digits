@@ -6,4 +6,4 @@
 1. Which handwritten digits are hardest for a computer to recognize?
 2. Which digits look most similar to each other?
 3. Can a computer learn to recognize handwritten digits?
-description of the progress:
+### description of the progress:
