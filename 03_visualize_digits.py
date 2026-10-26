@@ -36,7 +36,7 @@ plt.hist(pixel_values, bins = np.arange(18) - 0.5, # placing each integer pixel 
         edgecolor = "black") # drawing a black outline around each bar
 
 # adding titles and labels
-plt.title("Distribution of pixels brightness")
+plt.title("Distribution of pixel brightness")
 plt.xlabel("Pixel intensity (0-16)")
 plt.ylabel("Number of pixels")
 plt.xticks(range(17))
