@@ -16,11 +16,11 @@ The dataset contains 1797 grayscale images representing handwritten digits from 
 
 ##  Run in order:
 ```powershelgl
-python -m pip install -r requirements.txt
-python handwritten_digits/01_load_digits.py
-python handwritten_digits/02_explore_digits.py
-python handwritten_digits/03_visualize_digits.py
-python handwritten_digits/04_classify_digits.py
+python3 -m pip install scikit-learn numpy matplotlib
+python3 01_load_digits.py
+python3 02_explore_digits.py
+python3 03_visualize_digits.py
+python3 04_classify_digits.py
 ```
 
 ## Dataset exploring report:
@@ -59,10 +59,10 @@ The dataset was divided into 80% training data and 20% testing data:
 
 The model was trained using the training images and evaluated using previously unseen testing images.
 
-**Perliminary Accuracy:** 98.61%
+**Preliminary Accuracy:** 98.61%
 
 The model correctly classified 355 out of the 360 testing images and incorrectly classified 5 images. <br>
-This result suggests that the 64 pixel features provide useful information for identifying handwritten digits. However additional evaluation is needed before drawing borders conclusions about model performance.
+This result suggests that the 64 pixel features provide useful information for identifying handwritten digits. However additional evaluation is needed before drawing broader conclusions about model performance.
 
 ## Progress Notes:
 
