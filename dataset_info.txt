@@ -1,0 +1,8 @@
+Dataset: Handwritten Digits  
+Provider: scikit-learn (original dataset from the UCI Optical Recognition of Handwritten Digits dataset)  
+URL: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html  
+Description: 1,797 grayscale images of handwritten digits (0–9); each image is 8×8 pixels with 64 numeric features and pixel intensity values ranging from 0 to 16.  
+Task: Multiclass classification.  
+Version: Unmodified dataset bundled with scikit-learn.  
+Loading: `from sklearn.datasets import load_digits; digits = load_digits()`  
+No raw dataset download is included in the repository.
