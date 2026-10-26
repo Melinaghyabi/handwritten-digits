@@ -26,7 +26,7 @@ python3 04_classify_digits.py
 ## Dataset exploring report:
 The dataset was explored using Python, NumPy, and Scikit-learn. <br>
 The dataset contains approximately 174-183 images per digit, which suggests that the ten digit classes are relatively balanced. Also no missing pixel value was found.<br>
-|Characteristic     |Results|
+|Characteristics    |Results|
 |-------------------|-------|
 |Number of Samples  |1797   |
 |Number of Features |64     |
