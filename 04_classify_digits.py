@@ -18,7 +18,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(
     stratify = Y # keeping roughly the same proportion of each digit in both sets
 )
 
-print("Training images:", len(X_test))
+print("Training images:", len(X_train))
 print("Testing images:", len(X_test))
 
 # creating a KNN classifier
