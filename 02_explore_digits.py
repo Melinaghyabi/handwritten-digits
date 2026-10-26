@@ -12,7 +12,7 @@ Y = digits.target
 
 # Step4: data structure
 print("Number of samples:", X.shape[0]) # expected output: Number of samples: 1797
-print("Number pf features:", X.shape[1]) # expeected output: Number of features: 64
+print("Number of features:", X.shape[1]) # expeected output: Number of features: 64
 print("Shape of images:", digits.images.shape) # expected output: Shape of images: (1797, 8, 8)
 print("Target labels:", digits.target_names) # expected output: Target labels: [0 1 2 3 4 5 6 7 8 9]
 print("Task type: Classification") # expected output: Task type: Classification
