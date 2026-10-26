@@ -88,3 +88,7 @@ This result suggests that the 64 pixel features provide useful information for i
 - **Needs improvement:** Further evaluation is needed to understand which handwritten digits are most frequently misclassified and why.
 - **Planned:** Investigate the model's mistakes, compare KNN with other classification methods.
 - **Instructor feedback requested:** Are the research questions focused enough, and does our evaluation avoid overclaiming?
+
+## AI usage:
+I used ChatGPT as a learning assistant. AI assistance included:
+Explaining the dataset and data analysis techniques. Helping troubleshoot errors and GitHub troubleshooting. And also assisting with grammatical corrections and sentence polishing.
