@@ -41,11 +41,11 @@ The dataset contains approximately 174-183 images per digit, which suggests that
 ## Data Visualizations:
 ### Graph 1: Class Distribution 
 This bar chart shows the number of images for each digit from 0 to 9. The counts are relatively similar, with digit 3 appearing most frequently (183 images) and digit 8 appearing least frequently (174 images).
-![Number of images per digit](handwritten-digits/figures/class_distribution.png)
+![Number of images per digit](figures/class_distribution.png)
 
 ### Graph 2: Pixel Intensity Distribution
 This histogram shows the frequency of pixel intensity values from 0 to 16. Pixel intensity 0 occurs most frequently, indicating that a large portion of images consists of dark background pixels.
-![Distribution of pixel brightness](handwritten-digits/figures/pixel_distribution.png)
+![Distribution of pixel brightness](figures/pixel_distribution.png)
 
 ## First Basic model:
 A K-Nearest Neighbors (KNN) classifier was used as the initial classification model.
