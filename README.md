@@ -7,3 +7,4 @@
 2. Which digits look most similar to each other?
 3. Can a computer learn to recognize handwritten digits?
 ### description of the progress:
+# Graph 1 - Class Distribution
