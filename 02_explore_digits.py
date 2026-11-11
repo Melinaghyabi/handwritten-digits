@@ -26,10 +26,13 @@ print("Standard deviation:", np.std(X)) # tells us how much these pixel brightne
 
 # Step5: Class distribution
 # we count how many examples of each digits exist
-labels, counts = np.unique(Y, return_counts = True)
+counts = [0] * 10 # initialize a list of zeros for digits 0-9
 
-for label, counts in zip(labels, counts):
-    print(f"Digit {label}: {counts} images") # example for expected oputput: Digit 0: 178 images, it print for all the digits from 0 to 9
+for label in Y:
+    counts[label] += 1
+
+for digit in range(10):
+    print(f"Digit {digit}: {counts[digit]} images") # example for expected oputput: Digit 0: 178 images, it print for all the digits from 0 to 9
 
 # Step6: Missing value check
 missing_values = np.isnan(X).sum()
