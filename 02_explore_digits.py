@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 digits = load_digits()
 
 # Step3: separating the features and target labels
-X = digits.data #using data instead of images in order to flatten the image and pixels in a row to work easier in machine learning
+X = digits.data
 Y = digits.target
 
 # Step4: data structure
@@ -25,7 +25,7 @@ print("Average pixel value:", np.mean(X)) # tells us the average brightness of a
 print("Standard deviation:", np.std(X)) # tells us how much these pixel brightness values vary around the dataset
 
 # Step5: Class distribution
-# we count how many exxamples of each digits exist
+# we count how many examples of each digits exist
 labels, counts = np.unique(Y, return_counts = True)
 
 for label, counts in zip(labels, counts):
