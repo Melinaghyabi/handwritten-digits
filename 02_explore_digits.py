@@ -38,7 +38,7 @@ for digit in range(10):
 missing_values = np.isnan(X).sum()
 
 print("Missing values:", missing_values) 
-# if a pixel's brightness were unknown, it could be represented as NaN
+# if a pixel's brightness were unknown, it could be represented as NaN or 1 in a binary matrix
 
 # Step7: Display a sample image
 plt.imshow(digits.images[0], cmap="gray")
