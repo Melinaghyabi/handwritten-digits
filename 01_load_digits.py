@@ -5,7 +5,7 @@ from sklearn.datasets import load_digits
 digits = load_digits()
 
 # separating images (features) and lables (targets)
-X = digits.images
+X = digits.data
 Y = digits.target
 
 # exploring basic information about the dataset
