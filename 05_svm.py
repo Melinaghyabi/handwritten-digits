@@ -60,7 +60,7 @@ print("Number of incorrect predictions:", (Y_test != Y_pred_best).sum())
 ConfusionMatrixDisplay.from_predictions(Y_test, Y_pred_best, cmap = "Blues")
 plt.title("SVM confusion matrix")
 plt.savefig("figures/svm_confusion_matrix.png")
-plt.show()
+plt.close()  # save the chart without opening a window
 
 # Step ten: showing the images the SVM got wrong
 wrong = (Y_test != Y_pred_best).nonzero()[0]  # positions of the wrong predictions
@@ -72,4 +72,4 @@ for i, index in enumerate(wrong):
     plt.title(f"True: {Y_test[index]}\nPred: {Y_pred_best[index]}")
     plt.axis("off")
 plt.savefig("figures/svm_misclassified.png")
-plt.show()
+plt.close()  # save the chart without opening a window
