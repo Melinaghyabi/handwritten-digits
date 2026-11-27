@@ -8,7 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow import keras
 from tensorflow.keras import layers
-
+import os
+os.makedirs("figures", exist_ok = True)
 keras.utils.set_random_seed(42)  # makes the CNN results repeatable
 
 # Step 2: loading the dataset
