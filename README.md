@@ -124,8 +124,6 @@ All three models were evaluated on the same 360 test images.
 - The CNN, the most complex model, performed worst. With tiny 8×8 images and only 1,437 training images, it overfit the training data. A CNN's advantage is more likely to appear with larger, more detailed images or more training data.
 - The differences between models are small (3 vs. 9 mistakes, about 1.7 percentage points) and come from a single train/test split. A different split could change the ranking slightly, so we do not claim that one model is better in general.
 
-**Limitations:** small 8×8 images, a single test split of 360 images, and the CNN was not tuned (for example, no dropout or early stopping).
-
 ## Progress Notes:
 - Loaded the Handwritten Digits dataset.
 - Examined the dataset structure and descriptive statistics.
@@ -160,4 +158,4 @@ The SVM performed best (99.17%, 3 mistakes), followed by KNN (98.61%, 5 mistakes
 I used ChatGPT as a learning assistant. AI assistance included:
 Explaining the dataset and data analysis techniques. Helping troubleshoot errors and GitHub troubleshooting. And also assisting with grammatical corrections and sentence polishing.
 
-I also used Claude (Anthropic) as a learning assistant for choosing which models and metrics to compare, explaining how a CNN works, setting up the Python environment for TensorFlow, converting the CNN notebook to a Python script, and drafting this README update.
+I also used Claude (Anthropic) as a learning assistant for choosing which models and metrics to compare, setting up the Python environment for TensorFlow, and converting the CNN notebook to a Python script.
