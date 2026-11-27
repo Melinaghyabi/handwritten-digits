@@ -16,6 +16,14 @@ The dataset contains 1,797 grayscale images representing handwritten digits from
 2. Is the dataset balanced across the ten digit classes?
 3. How are pixel intensity values distributed across handwritten digit images?
 
+## Setup:
+TensorFlow (used for the CNN) needs Python 3.10–3.12, so the project uses a Python 3.12 virtual environment:
+``` powershell
+py -3.12 -m venv .venv
+.venv\Scripts\activate
+python -m pip install scikit-learn numpy matplotlib tensorflow
+```
+
 ## Run in order:
 ``` powershell
 python 01_load_digits.py
@@ -25,6 +33,7 @@ python 04_classify_digits.py
 python 05_svm.py
 python 06_cnn.py
 ```
+All charts are saved to the `figures/` folder.
 
 ## Data exploring and analyze report:
 
@@ -93,6 +102,11 @@ The SVM's three mistakes were a 6 read as an 8, an 8 read as a 1, and a 9 read a
 
 A CNN was built with TensorFlow/Keras (`06_cnn.py`). Unlike KNN and SVM, which treat each image as a flat list of 64 numbers, the CNN reads each image as an 8×8 grid, so it can learn shapes such as curves and lines.
 
+- Input: each image reshaped to 8×8×1 and pixel values scaled to 0–1
+- Layers: two convolution layers (32 and 64 filters), one max-pooling layer and two dense layers (85,066 trainable parameters)
+- Training: 30 epochs, batch size 32, with 10% of the training images held back for validation
+- Random seed: 42, so results can be reproduced
+
 **CNN test accuracy: 97.50%**, with 9 incorrect predictions out of 360.
 
 The training curve shows that training accuracy reached 100% by epoch 18, while validation accuracy stayed around 97–99%. This gap suggests mild overfitting: the CNN learned the training images perfectly but did not generalize better than the simpler models.
@@ -139,19 +153,12 @@ All three models were evaluated on the same 360 test images.
 - Compared all three models on the same test images using accuracy, macro F1, confusion matrices and misclassified images.
 - Moved all code to local Python scripts so every model runs in the same environment.
 
-## Conclusion:
+## Next steps for final project:
 
-All three models classified more than 97% of the test digits correctly. The SVM performed best (99.17%), followed by KNN (98.61%) and the CNN (97.50%).
-
-## Answering the research questions:
-
-**1. Which digits does the model confuse most often?**
-Reading an 8 as a 1 was the most common mistake: 3 of KNN's 5 mistakes, 3 of the CNN's 9 and 1 of the SVM's 3. The digit 9 was also misread several times (as a 4, 7 or 8). At 8×8 resolution, these digits share similar strokes, which makes them harder to tell apart.
-
-**2. How accurately can a basic model classify unseen digits?**
-Very accurately. The KNN model correctly classified 355 of 360 unseen test images (98.61%). For comparison, the SVM reached 99.17% and the CNN 97.50%. A simple model was enough for this task; the more complex CNN did not improve results on such small images.
-
-**Limitation:** results come from a single test set of 360 images. In real mail sorting, even a small error rate means misrouted mail, so uncertain predictions would still need a human check.
+- **Working:** Data loading, exploratory analysis and visualizations, and three trained models: KNN (98.61%), SVM (99.17%) and CNN (97.50%), compared on the same test set.
+- **Needs improvement:** The comparison uses a single train/test split. Cross-validation across all three models would show whether the ranking holds.
+- **Planned:** Run cross-validation for all three models, try reducing CNN overfitting (dropout, early stopping), and write the final conclusion.
+- **Instructor feedback requested:** Are the research questions focused enough, and does our evaluation avoid overclaiming?
 
 ## AI usage:
 I used ChatGPT as a learning assistant. AI assistance included:
